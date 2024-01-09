@@ -1,0 +1,655 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3id.org/ppon/bppo"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3id.org/ppon/bppo"
+     versionIRI="http://www.w3id.org/ppon/bppo/1.0">
+    <Prefix name="" IRI="http://www.w3id.org/ppon/bppo#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="bpo" IRI="http://www.w3id.org/bpo#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">The Building Product Property Ontology (BPPO) provides a vocabulary to define the properties for the products used in the construction industry. The ontology has been developed in accordance with the standard ISO23386:2020. 
+
+The namespace for BPPO terms is http://www.w3id.org/ppon/bppo#
+
+The suggested prefix for the BPPO namespace is bppo.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="dc:Language"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bpo:Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bpo:Product"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bpo:RangedAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InterconnectedDictionary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PropertyGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Status"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="skos:related"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compatibleWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#countryOfUse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#memberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propertyOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propertyStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#replacedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dataType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dateOfActivation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dateOfCreation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dateOfDeactivation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dateOfLastChange"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dateOfRevision"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dateOfVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#definition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#deprecationExplanation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#digitalFormat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGUID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isDynamicProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numberOfValues"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#physicalQuantity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#revisionNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#units"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#versionNumber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Active"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inactive"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Property"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="skos:related"/>
+            <Class abbreviatedIRI="bpo:Attribute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Property"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="skos:related"/>
+            <Class abbreviatedIRI="bpo:RangedAttribute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#Active"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#Inactive"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#compatibleWith"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#countryOfUse"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#language"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#memberOf"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#propertyOf"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#propertyStatus"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#replacedBy"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#compatibleWith"/>
+        <Class IRI="#InterconnectedDictionary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#language"/>
+        <Class abbreviatedIRI="dc:Language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#memberOf"/>
+        <Class IRI="#PropertyGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#propertyOf"/>
+        <Class abbreviatedIRI="bpo:Product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#propertyStatus"/>
+        <Class IRI="#Status"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#replacedBy"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#description"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isDynamicProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numberOfValues"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dataType"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateOfActivation"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateOfCreation"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateOfDeactivation"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateOfLastChange"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateOfRevision"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateOfVersion"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#definition"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#deprecationExplanation"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#digitalFormat"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dimension"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGUID"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isDynamicProperty"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numberOfValues"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#physicalQuantity"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#revisionNumber"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#units"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#versionNumber"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateOfActivation"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateOfCreation"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateOfDeactivation"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateOfLastChange"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateOfRevision"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateOfVersion"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#definition"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#deprecationExplanation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#description"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dimension"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGUID"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isDynamicProperty"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numberOfValues"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#revisionNumber"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#units"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#versionNumber"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InterconnectedDictionary</IRI>
+        <Literal>Interconnected Dictionary is a dictionary following this standard and connected using specific attributes and interconnected to other interconnected dictionaries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Property</IRI>
+        <Literal>A class represents the properties of product used in the construction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Property</IRI>
+        <Literal>a property is defined as inherent or acquired feature (ISO/DIS 6707-1)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PropertyGroup</IRI>
+        <Literal>A container enabling the properties to be prearranged or organized. A Property Set as defined is ISO 16739 is a group of properties, but a group of properties is not necessarily a Property Set.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Status</IRI>
+        <Literal>The status of the property during its life cycle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#compatibleWith</IRI>
+        <Literal>This property is used for compatibility between already existing properties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#compatibleWith</IRI>
+        <Literal>relation of the property in the interconnected dictionaries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#countryOfUse</IRI>
+        <Literal>Country in which the property is used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#countryOfUse</IRI>
+        <Literal>Country of use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dataType</IRI>
+        <Literal>Format for expressing the value of the property. This can be understood as the storage type from a software perspective. In case of a dynamic property the value of this attribute is the datatype of the result of the calculation by the formula</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dataType</IRI>
+        <Literal>Data Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dateOfActivation</IRI>
+        <Literal>Date after when the property can be used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfActivation</IRI>
+        <Literal>Date of activation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfCreation</IRI>
+        <Literal>Date of creation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#dateOfCreation</IRI>
+        <Literal>2014-04-30T10:39:53Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dateOfDeactivation</IRI>
+        <Literal>Date as of which the property becomes obsolete. The property is maintained in the dictionary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfDeactivation</IRI>
+        <Literal>Date of deactivation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dateOfLastChange</IRI>
+        <Literal>Date of validation of the last change request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfLastChange</IRI>
+        <Literal>Date of last change</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dateOfRevision</IRI>
+        <Literal>Date of the revision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfRevision</IRI>
+        <Literal>Date of revision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dateOfVersion</IRI>
+        <Literal>Date of the version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfVersion</IRI>
+        <Literal>Date of version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#definition</IRI>
+        <Literal>List of pairs (Definition of the property, language)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deprecationExplanation</IRI>
+        <Literal>Sentence explaining the reason of the deprecation. Can explain how to convert values to conform to the new property. This explanation has to be written in international English (EN)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#deprecationExplanation</IRI>
+        <Literal>Deprecation explanation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#description</IRI>
+        <Literal>List of pairs (Description of  the property, language)
+This attribute is used to provide a plain language description of the property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#digitalFormat</IRI>
+        <Literal>Pair for digital text type (precision, unit of measure). Precision is the number of significant digits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#digitalFormat</IRI>
+        <Literal>Digital format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dimension</IRI>
+        <Literal>In case of a physical quantity, dimension according to ISO 80000. This attribute allows the dimension to be machine readable. As all physical quantities are derived from 7 base quantities, it is provided with the power attached to a basic dimension in the following order and with one space between each.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGUID</IRI>
+        <Literal>globally unique identifier generated using an algorithm in conformity with standard ISO/IEC 11578:1996</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGUID</IRI>
+        <Literal>globally unique identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGUID</IRI>
+        <Literal>936DA01F-9ABD-4D9D-80C7-02AF85C822A8</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasName</IRI>
+        <Literal>List of pairs (Name of the property and language).
+This attribute can be used to add synonyms for different domains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDynamicProperty</IRI>
+        <Literal>If this is a dynamic property, the value will be expressed as a formula</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isDynamicProperty</IRI>
+        <Literal>Dynamic property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#memberOf</IRI>
+        <Literal>This property describes the product property is a member of property group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#memberOf</IRI>
+        <Literal>member of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numberOfValues</IRI>
+        <Literal>This attribute provides information about the number of values to provide. It may be one value or a table of values (equivalent to ifcPropertyTableValue in EN ISO 16739). In case of a table value, the number of values represent the number of rows of a 2 columns table</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numberOfValues</IRI>
+        <Literal>Number of values</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#physicalQuantity</IRI>
+        <Literal>List of Pairs (Physical quantity | Language). Physical quantities are expressed in International System (SI) units Non-physical quantities such as text are expressed with the value &quot;without&quot;. This is equivalent to a measure in EN ISO 16739 and ISO 10303</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#physicalQuantity</IRI>
+        <Literal>Physical quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#propertyOf</IRI>
+        <Literal>This property describes a property is used to decribe the characteristics of product.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#propertyOf</IRI>
+        <Literal>property of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#propertyStatus</IRI>
+        <Literal>The property describes the status of the property during its life cycle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#propertyStatus</IRI>
+        <Literal>Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#replacedBy</IRI>
+        <Literal>Identifier of the replacing property (or properties).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#replacedBy</IRI>
+        <Literal>Replaced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#revisionNumber</IRI>
+        <Literal>This revision number allows tracking of minor changes eg new translation, changes of typos. If the version number changes, the revision number starts again at 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#units</IRI>
+        <Literal>a unit to represent a scale that enables a value to be measured. It can be possible to use this attribute to explain there is no unit attached to the property by using “unitless”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#units</IRI>
+        <Literal>Units</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#versionNumber</IRI>
+        <Literal>This version number allows tracking of major changes essentially a change of the domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#versionNumber</IRI>
+        <Literal>Version number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#versionNumber</IRI>
+        <Literal>2</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
