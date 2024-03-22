@@ -7,7 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.w3id.org/ppon/bppo"
      versionIRI="http://www.w3id.org/ppon/bppo/1.0">
-    <Prefix name="" IRI="http://www.w3id.org/ppon/bppo#"/>
+    <Prefix name="" IRI="http://www.w3id.org/ppon/bppo"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="bpo" IRI="http://www.w3id.org/bpo#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -349,7 +349,7 @@ The suggested prefix for the BPPO namespace is bppo.</Literal>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasGUID"/>
-        <Datatype abbreviatedIRI="xsd:anyURI"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasName"/>
